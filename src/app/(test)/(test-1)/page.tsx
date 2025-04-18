@@ -1,7 +1,9 @@
 import ClientComponent from "@/components/ClientComponent";
 import ServerComponent from "@/components/ServerComponent";
+import { connection } from "next/server";
 
-export default function Page() {
+export default async function Page() {
+  await connection()
   return (
     <div className="text-center h-screen flex items-center flex-col justify-center gap-4">
       <p>
